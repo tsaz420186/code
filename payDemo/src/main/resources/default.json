@@ -1,0 +1,4 @@
+{
+  "outPath": "E:/doc" //指定文档的输出路径 相对路径时请写 ./ 不要写 / eg:./src/main/resources/static/doc
+ // "packageFilters": "com.example.paydemo.entity.OrderInfo" // controller包过滤
+}

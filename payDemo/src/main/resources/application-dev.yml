@@ -1,0 +1,17 @@
+#测试
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://39.98.80.156:3306/nortek?useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: Nort]eksoft%20@21~)
+
+logging:
+  level:
+    #    org:
+    #      hibernate:
+    #        SQL: debug
+    com:
+      norteksoft:
+        demo: DEBUG
+#  file: demo.log

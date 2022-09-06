@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    timeout: 5000ms
+    lettuce:
+      pool:
+        max-active: -1
+        max-wait: -1ms
+        max-idle: 50
+        min-idle: 10
+  data:
+    redis:
+      repositories:
+        enabled: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+server:
+  port: 8442
+#  ssl:
+#    key-store: 8361077_pay.norteksoft.com.pfx
+#    key-store-password: Hv5eWRmM
+

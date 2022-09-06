@@ -1,12 +1,15 @@
+
 plugins {
     id 'org.springframework.boot' version '2.3.7.RELEASE'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
+    id "com.github.shalousun.smart-doc" version "2.5.2"
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 configurations {
     compileOnly {
@@ -19,16 +22,22 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'cn.hutool:hutool-all:5.8.5'
+    implementation group: 'mysql', name: 'mysql-connector-java'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     compile fileTree(dir:'lib',include:['*.jar'])
+
 }
 
 test {
     useJUnitPlatform()
 }
+

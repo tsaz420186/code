@@ -1,0 +1,16 @@
+#
+##kafka:
+#kafka.bootstrap-servers: 103.131.169.103:9092
+##kafka.bootstrap-servers: 172.16.0.6:9092
+#kafka.consumer.group-id: niudanji-consumer1
+#kafka.sublishTopic: kw.data.forward
+#auto-offset-reset: earliest
+#  listener:
+#    batch-listener: true                                #是否开启批量消费，true表示批量消费
+#    concurrencys: 3,6                                   #设置消费的线程数
+#
+#corePoolSize: 4
+#maximunPoolSize: 8
+##单位为秒
+#keepAliveTime: 60
+#
