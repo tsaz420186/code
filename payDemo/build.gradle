@@ -41,3 +41,8 @@ test {
     useJUnitPlatform()
 }
 
+smartdoc {
+    configFile = file("src/main/resources/smart-doc.json")
+
+}
+
